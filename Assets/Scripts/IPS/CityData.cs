@@ -20,6 +20,7 @@ public class CityData : ScriptableObject
         Akwus,
         Degort,
         Naize,
+        Narkhalit,
         Kairus,
         Highres,
         LirKardur

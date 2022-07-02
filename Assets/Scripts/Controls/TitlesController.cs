@@ -7,6 +7,8 @@ public class TitlesController : MonoBehaviour
 
     public Camera camera;
 
+    public GameObject CitiesObj;
+
     GameObject[] provinces, cities, countries;
 
     // Start is called before the first frame update
@@ -39,6 +41,7 @@ public class TitlesController : MonoBehaviour
             {
                 country.SetActive(false);
             }
+            CitiesObj.SetActive(true);
         }
         if (camera.transform.position.y >= 15 && camera.transform.position.y <= 25)
         {
@@ -54,6 +57,7 @@ public class TitlesController : MonoBehaviour
             {
                 country.SetActive(false);
             }
+            CitiesObj.SetActive(true);
         }
         if (camera.transform.position.y >= 25)
         {
@@ -69,6 +73,7 @@ public class TitlesController : MonoBehaviour
             {
                 country.SetActive(true);
             }
+            CitiesObj.SetActive(false);
         }
     }
 }
