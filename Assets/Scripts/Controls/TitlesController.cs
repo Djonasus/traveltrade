@@ -57,7 +57,7 @@ public class TitlesController : MonoBehaviour
             {
                 country.SetActive(false);
             }
-            CitiesObj.SetActive(true);
+            CitiesObj.SetActive(false);
         }
         if (camera.transform.position.y >= 25)
         {

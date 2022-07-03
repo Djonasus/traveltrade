@@ -6,8 +6,7 @@ using TMPro;
 
 public class City : MonoBehaviour
 {
-    [SerializeField]
-    CityData cty;
+    public CityData cty;
 
     public void OnClck()
     {
