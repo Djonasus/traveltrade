@@ -26,4 +26,6 @@ public class CityData : ScriptableObject
         LirKardur
     }
     public province Province;
+    //public GameObject cityObj;
+    public Vector3 cityPosition;
 }

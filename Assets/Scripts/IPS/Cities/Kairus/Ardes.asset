@@ -15,3 +15,4 @@ MonoBehaviour:
   CityName: "\u0410\u0440\u0434\u0435\u0441"
   CityType: 2
   Province: 4
+  cityPosition: {x: 9.43, y: 1.83, z: 0.06}
