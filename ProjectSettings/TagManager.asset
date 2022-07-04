@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - City
+  - Province
+  - Country
+  - CameraManager
   layers:
   - Default
   - TransparentFX
