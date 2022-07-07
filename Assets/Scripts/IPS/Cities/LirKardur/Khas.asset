@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CityName: "\u041A\u0445\u0430\u0441"
   CityType: 4
+  TransferMethod: 0
   Province: 6
   cityPosition: {x: 14.71, y: 1.65, z: 0.06}
+  NearestCities:
+  - {fileID: 11400000, guid: 5abfad88f10fd451f8fab23d865ae0dd, type: 2}
+  - {fileID: 11400000, guid: 74e17a69b0e7d4d549459a38d346b267, type: 2}
+  - {fileID: 11400000, guid: 9719623f5dc244b85ab4ce0e3ae95d4c, type: 2}
+  - {fileID: 11400000, guid: 24e97e249a91b48e59e8417975b50937, type: 2}

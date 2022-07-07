@@ -15,6 +15,13 @@ public class CityData : ScriptableObject
         Port
     }
     public cityType CityType;
+    public enum transferMethod
+    {
+        Walking,
+        Boat
+        
+    }
+    public transferMethod TransferMethod;
     public enum province
     {
         Akwus,
@@ -28,4 +35,5 @@ public class CityData : ScriptableObject
     public province Province;
     //public GameObject cityObj;
     public Vector3 cityPosition;
+    public CityData[] NearestCities;
 }

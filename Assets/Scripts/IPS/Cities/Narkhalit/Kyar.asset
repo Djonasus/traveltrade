@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CityName: "\u041A\u044C\u044F\u0440"
   CityType: 4
+  TransferMethod: 1
   Province: 3
   cityPosition: {x: -5.87, y: 5.99, z: 0.06}
+  CityRoads: []
