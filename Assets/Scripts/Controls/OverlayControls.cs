@@ -9,10 +9,17 @@ public class OverlayControls : MonoBehaviour
 
     void Start()
     {
+        UpdateCityInfo();
+    }
+    void LateUpdate()
+    {
+        UpdateCityInfo();
+    }
+    public void UpdateCityInfo()
+    {
         CityData cty = GameObject.FindGameObjectWithTag("CameraManager").GetComponent<PlayerData>().currentCity;
         CityNameObj.GetComponent<Text>().text = cty.name + " / " + cty.Province;
     }
-
     public void OnCoinClick()
     {
         Debug.Log("Clicked");
