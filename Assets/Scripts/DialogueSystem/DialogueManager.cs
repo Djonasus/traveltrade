@@ -48,20 +48,25 @@ public class DialogueManager : MonoBehaviour
         // Устанавливаем значение поле элементом по индексу 0
         AnswerText.text = answerOptions[0];
 
-        // Вызываем метод переключения на след.предложение
-        NextDisplaySentence();
+        // Запускаем коорутину
+        StartCoroutine(NextDisplaySentence());
 
     }
 
-    public void NextDisplaySentence()
+    /*
+    Коорутина обновляет предложения диалога в пределах каждого окончания отсчета интервала.
+     */
+    IEnumerator NextDisplaySentence()
     {
         // Проверяем есть ли в Queue элементы
-        if(sentences.Count != 0)
+        while(sentences.Count != 0)
         {
             // В переменную вытаскиваем элементы из Queue
             string sentence = sentences.Dequeue();
             // Устанавливаем значение поля DialogueText
             DialogueText.text = sentence;
+            // Интервал коорутины
+            yield return new WaitForSeconds(10f);
 
         }
 
