@@ -36,11 +36,7 @@ public class DialogueManager : MonoBehaviour
 
         // Заполняем Queue
         foreach (string sentence in dialogue.sentences)
-        {
-
             sentences.Enqueue(sentence);
-
-        }
 
         // Запролняем answerOptions вариантами ответа
         answerOptions = dialogue.answerOptions;
