@@ -22,21 +22,22 @@ public class SaveAndLoadMap : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(PlayerPrefs.GetFloat("XPos"), GameObject.FindGameObjectWithTag("Player").transform.position.y, PlayerPrefs.GetFloat("ZPos"));
         }
     }
-    private void OnApplicationQuit()
+    public void SaveData()
     {
         PlayerPrefs.SetFloat("XPos", GameObject.FindGameObjectWithTag("Player").transform.position.x);
         PlayerPrefs.SetFloat("ZPos", GameObject.FindGameObjectWithTag("Player").transform.position.z);
         PlayerPrefs.SetInt("Money", GameObject.FindGameObjectWithTag("CameraManager").GetComponent<PlayerData>().Money);
         PlayerPrefs.SetInt("Crystalls", GameObject.FindGameObjectWithTag("CameraManager").GetComponent<PlayerData>().Crystalls);
     }
+    private void OnApplicationQuit()
+    {
+        SaveData();
+    }
     private void OnApplicationFocus(bool focus)
     {
         if (!focus)
         {
-            PlayerPrefs.SetFloat("XPos", GameObject.FindGameObjectWithTag("Player").transform.position.x);
-            PlayerPrefs.SetFloat("ZPos", GameObject.FindGameObjectWithTag("Player").transform.position.z);
-            PlayerPrefs.SetInt("Money", GameObject.FindGameObjectWithTag("CameraManager").GetComponent<PlayerData>().Money);
-            PlayerPrefs.SetInt("Crystalls", GameObject.FindGameObjectWithTag("CameraManager").GetComponent<PlayerData>().Crystalls);
+            SaveData();
         }
     }
 }

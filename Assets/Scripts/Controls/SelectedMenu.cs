@@ -30,6 +30,8 @@ public class SelectedMenu : MonoBehaviour
         player.MoveSafety(cty.GetComponent<PathNode>());
         GameObject.FindGameObjectWithTag("Player").GetComponent<PathMover>().ToCityObj.SetActive(false);
         OnCancelClick();
+
+
     }
     public void OnFastTransferClick()
     {
